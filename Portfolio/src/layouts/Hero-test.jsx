@@ -1,26 +1,32 @@
 import React from 'react';
 
 const Hero = () => {
-    const scrollDown = () => {
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-            const offset = mainContent.getBoundingClientRect().top + window.scrollY;
-            const additionalOffset = 100; // Ajusta este valor para desplazar más abajo
-            window.scrollTo({
-                top: offset - additionalOffset,
-                behavior: 'smooth',
-            });
-        }
-    };
+ 
+        const scrollDown = () => {
+            const mainSection = document.querySelector('.bg-primary-dark.min-h-screen');
+            if (mainSection) {
+                // Obtener la posición de la sección Main.astro
+                const offset = mainSection.getBoundingClientRect().top + window.scrollY;
+                // Desplazar hacia el centro de la sección
+                const targetPosition = offset + (mainSection.offsetHeight / 4);
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth',
+                });
+            } else {
+                console.log('No se encontró la sección principal');
+            }
+        };
 
     return (
         <div className='pt-90'>
             {/* Hero Section */}
-            <section className="bg-primary mt-24 text-7xl ml-10 font-bold">
-                <h1>Mario Santos</h1>
-                <h2 className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+            <section className="bg-primary mt-24  ml-10 font-bold">
+                <h1 className='text-7xl'>Mario Santos</h1>
+                <h2 className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-7xl">
                     FullStack Developer
                 </h2>
+                <h3 className='mt-10 text-4xl'>Transforming Ideas To Reality</h3>
             </section>
 
             {/* Main Content Section */}
