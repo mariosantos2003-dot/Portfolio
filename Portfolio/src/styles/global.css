@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme{
+    --color-primary-dark: #121619;
+    --color-gray-primary: #bec5ad;
+    --color-rose: #8B575C;
+    --color-ucla: #427AA1;
+    --color-accent-purple: #858AE3;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+h1{
+    font-family: 'Mulish', sans-serif;
+}
