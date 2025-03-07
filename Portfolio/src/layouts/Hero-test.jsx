@@ -24,7 +24,7 @@ const Hero = () => {
             <section className="bg-primary mt-24  ml-10 font-bold">
                 <h1 className='text-7xl'>Mario Santos</h1>
                 <h2 className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-7xl">
-                    FullStack Developer
+                    FrontEnd Developer
                 </h2>
                 <h3 className='mt-10 text-4xl'>Transforming Ideas To Reality</h3>
             </section>
