@@ -3,10 +3,15 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../layouts/Hero-test";
 import Main from "../layouts/Main.astro";
 import Skills from "../layouts/Skills.astro";
+import NavBar from "../layouts/NavBar";
+import Contact from "../layouts/Contact.astro";
+
 ---
 
 <Layout>
+  <NavBar client:load />
   <Hero client:load />
   <Main />
   <Skills />
+  <Contact />
 </Layout>
