@@ -1,31 +1,33 @@
-<section id="main-section" class="bg-primary-dark mt-60 min-h-screen mb-100">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<section id="main-section" class="bg-primary-dark mt-16 sm:mt-24 md:mt-40 lg:mt-60 min-h-screen mb-16 sm:mb-32 md:mb-64 lg:mb-100">
   <div
-    class="grid grid-cols-10 grid-rows-12 gap-8 pl-20 pr-20 pb-100 pt-100 w-full text-4xl text-center font-bold h-[80vh]"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-10 grid-rows-auto gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-8 md:px-12 lg:px-20 py-12 sm:py-16 md:py-24 lg:py-100 w-full text-2xl md:text-3xl lg:text-4xl text-center font-bold min-h-[80vh]"
   >
     <!-- Botón 1 - About Me -->
     <div
-      class="col-span-6 row-span-8 rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 items-center justify-center hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 card"
+      class="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 row-span-auto md:row-span-8 rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 items-center justify-center hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 card mb-4 md:mb-0"
     >
       <div class="card-inner">
         <div
-          class="card-front rounded-2xl bg-primary-dark h-full w-full items-center flex justify-center"
+          class="card-front rounded-2xl bg-primary-dark h-full w-full items-center flex justify-center text-2xl sm:text-xl md:text-2xl lg:text-3xl"
         >
           About Me
         </div>
-        <div class="card-back rounded-2xl bg-primary-dark h-full w-full flex flex-col justify-center p-8">
-          <h3 class="text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500">
+        <div class="card-back rounded-2xl bg-primary-dark h-full w-full flex flex-col justify-center p-4 sm:p-4 md:p-6 lg:p-8">
+          <h3 class="text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-bold mb-2 sm:mb-2 md:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500">
             Mario Santos
           </h3>
-          <p class="text-3xl text-left leading-relaxed">
+          <p class="text-lg sm:text-lg md:text-xl lg:text-2xl text-left leading-relaxed">
             I'm a Developer focused primarily in <span class="font-semibold text-accent-purple">Front End</span>!
           </p>
-          <p class="text-2xl text-left leading-relaxed mt-10">
+          <p class="text-base sm:text-sm md:text-base lg:text-xl text-left leading-relaxed mt-2 sm:mt-2 md:mt-6">
             Since I was a kid, electronics and computers have been my passion, and now I'm making it my profession.
           </p>
-          <p class="text-2xl text-left leading-relaxed mt-2">
-          My second passion is music, and I really like to blend my two passions together.
+          <p class="text-base sm:text-sm md:text-base lg:text-lg text-left leading-relaxed mt-1 sm:mt-1 md:mt-2">
+            My second passion is music, and I really like to blend my two passions together.
           </p>
-          <p class="text-2xl text-left leading-relaxed mt-2">
+          <p class="text-base sm:text-sm md:text-base lg:text-lg text-left leading-relaxed mt-1 sm:mt-1 md:mt-2">
             I'm a very curious person, always looking for new challenges and learning new things. Also, I'm very hardworking and always give my best in everything I do.
           </p>
         </div>
@@ -34,37 +36,35 @@
 
     <!-- Botón 2 - Education -->
     <div
-      class="col-span-4 row-span-4 col-start-7 rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 items-center justify-center hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 card"
+      class="col-span-1 sm:col-span-1 md:col-span-3 lg:col-span-5 md:col-start-auto lg:col-start-6 row-span-auto md:row-span-4 rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 items-center justify-center hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 card mb-4 md:mb-0"
     >
       <div class="card-inner">
         <div
-          class="card-front rounded-2xl bg-primary-dark h-full w-full items-center flex justify-center"
+          class="card-front rounded-2xl bg-primary-dark h-full w-full items-center flex justify-center text-2xl sm:text-xl md:text-2xl lg:text-3xl"
         >
           Education
         </div>
-        <div
-          class="card-back rounded-2xl text-xl bg-primary-dark h-full w-full flex flex-col justify-evenly py-4 px-2"
-        >
-          <div class="text-center mb-2">
-            <h4 class="font-bold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Web Development</h4>
-            <p class="text-base">Superior Degree</p>
-            <p class="text-base">UOC 2024-2025</p>
+        <div class="card-back rounded-2xl text-base sm:text-lg md:text-xl bg-primary-dark h-full w-full flex flex-col justify-evenly py-2 sm:py-3 md:py-4 px-2">
+          <div class="text-center mb-1 sm:mb-2">
+            <h4 class="font-bold text-xs sm:text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Web Development</h4>
+            <p class="text-xs sm:text-sm md:text-base">Superior Degree</p>
+            <p class="text-xs sm:text-sm md:text-base">UOC 2024-2025</p>
           </div>
 
-          <div class="w-full border-t border-gray-600 my-1"></div>
+          <div class="w-full border-t border-gray-600 my-0.5 sm:my-1"></div>
 
-          <div class="text-center mb-2">
-            <h4 class="font-bold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">App Development</h4>
-            <p class="text-base">Superior Degree</p>
-            <p class="text-base">INS Pedralbes 2021-2023</p>
+          <div class="text-center mb-1 sm:mb-2">
+            <h4 class="font-bold text-xs sm:text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">App Development</h4>
+            <p class="text-xs sm:text-sm md:text-base">Superior Degree</p>
+            <p class="text-xs sm:text-sm md:text-base">INS Pedralbes 2021-2023</p>
           </div>
 
-          <div class="w-full border-t border-gray-600 my-1"></div>
+          <div class="w-full border-t border-gray-600 my-0.5 sm:my-1"></div>
 
           <div class="text-center">
-            <h4 class="font-bold text text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Bachelor Degree</h4>
-            <p class="text-base">Social Science</p>
-            <p class="text-base">IES Francisco de GOYA 2019-2021</p>
+            <h4 class="font-bold text-xs sm:text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Bachelor Degree</h4>
+            <p class="text-xs sm:text-sm md:text-base">Social Science</p>
+            <p class="text-xs sm:text-sm md:text-base">IES GOYA 2019-2021</p>
           </div>
         </div>
       </div>
@@ -72,47 +72,41 @@
 
     <!-- Botón 3 - Experience -->
     <div
-      class="col-span-4 row-span-4 col-start-7 row-start-5 rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 items-center justify-center hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 card"
+      class="col-span-1 sm:col-span-1 md:col-span-3 lg:col-span-5 md:col-start-4 lg:col-start-6 row-span-auto md:row-span-4 md:row-start-5 rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 items-center justify-center hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 card"
     >
       <div
         class="card-inner rounded-2xl bg-primary-dark h-full w-full items-center flex justify-center"
       >
         <div
-          class="card-front flex items-center justify-center rounded-2xl bg-primary-dark h-full w-full"
+          class="card-front flex items-center justify-center rounded-2xl bg-primary-dark h-full w-full text-2xl sm:text-xl md:text-2xl lg:text-3xl"
         >
           Experience
         </div>
-        <div
-          class="card-back rounded-2xl text-lg bg-primary-dark h-full w-full flex flex-col justify-start py-2 px-2 "
-        >
-          <div class="text-center mb-1">
-            <h4 class="font-bold text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-red-200">React Front End Developer</h4>
-            <p class="text-xs md:text-sm">MSR Informatica</p>
-            <p class="text-xs md:text-sm">2023-2023</p>
+        <div class="card-back rounded-2xl text-lg bg-primary-dark h-full w-full flex flex-col justify-start py-1 px-1 sm:py-2 sm:px-2 md:py-3 md:px-3">
+          <div class="text-center mb-0.5 sm:mb-1">
+            <h4 class="font-bold text-xs sm:text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-red-200">React Front End Dev</h4>
+            <p class="text-xs sm:text-sm">MSR 2023-2023</p>
           </div>
 
           <div class="w-full border-t border-gray-600 my-0.5"></div>
 
-          <div class="text-center mb-1">
-            <h4 class="font-bold text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-red-200">Administrative</h4>
-            <p class="text-xs md:text-sm">Hospital Clinic</p>
-            <p class="text-xs md:text-sm">2024-2025</p>
+          <div class="text-center mb-0.5 sm:mb-1">
+            <h4 class="font-bold text-xs sm:text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-red-200">Administrative</h4>
+            <p class="text-xs sm:text-sm">Hospital Clinic 2024-2025</p>
           </div>
 
           <div class="w-full border-t border-gray-600 my-0.5"></div>
 
-          <div class="text-center mb-1">
-            <h4 class="font-bold text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-red-200">Storage Manager</h4>
-            <p class="text-xs md:text-sm">Inditex ESP</p>
-            <p class="text-xs md:text-sm">2023-2024</p>
+          <div class="text-center mb-0.5 sm:mb-1">
+            <h4 class="font-bold text-xs sm:text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-red-200">Storage Manager</h4>
+            <p class="text-xs sm:text-sm">Inditex ESP 2023-2024</p>
           </div>
 
           <div class="w-full border-t border-gray-600 my-0.5"></div>
 
           <div class="text-center">
-            <h4 class="font-bold text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-red-200">Cuissine and Logistics</h4>
-            <p class="text-xs md:text-sm">Aramark</p>
-            <p class="text-xs md:text-sm">2022-2024</p>
+            <h4 class="font-bold text-xs sm:text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-red-200">Cuissine & Logistics</h4>
+            <p class="text-xs sm:text-sm">Aramark 2022-2024</p>
           </div>
         </div>
       </div>
@@ -120,14 +114,14 @@
 
     <!-- Botón 4 - Projects Heading -->
     <div
-      class="col-span-4 row-span-2 col-start-4 row-start-9 flex justify-center items-center"
+      class="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-10 row-span-auto md:row-span-2 flex justify-center items-center py-6 md:py-0"
     >
-      <h1 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-red-400 to-yellow-200">PROJECTS</h1>
+      <h1 class="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-red-400 to-yellow-200">PROJECTS</h1>
     </div>
 
     <!-- Botón 5 - Project 1 -->
     <div
-      class="col-span-5 row-span-2 row-start-11 rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 items-center justify-center hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 card"
+      class="col-span-1 sm:col-span-1 md:col-span-3 lg:col-span-5 row-span-auto md:row-span-2 rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 items-center justify-center hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 card"
     >
       <div class="card-inner">
         <div
@@ -166,7 +160,7 @@
 
     <!-- Botón 6 - Project 2 -->
     <div
-      class="col-span-5 row-span-2 col-start-6 row-start-11 rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 items-center justify-center hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 card"
+      class="col-span-1 sm:col-span-1 md:col-span-3 lg:col-span-5 md:col-start-4 lg:col-start-6 row-span-auto md:row-span-2 rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 items-center justify-center hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 card"
     >
       <div class="card-inner">
         <div
@@ -192,7 +186,25 @@
 <style>
   .card {
     perspective: 1000px;
-    min-height: 200px; /* Altura mínima para las cards */
+    min-height: 150px;
+  }
+
+  @media (min-width: 640px) {
+    .card {
+      min-height: 180px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .card {
+      min-height: 200px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .card {
+      min-height: 220px;
+    }
   }
 
   .card-inner {
@@ -204,8 +216,16 @@
     transform-style: preserve-3d;
   }
 
-  .card:hover .card-inner {
-    transform: rotateY(180deg);
+  @media (hover: none) {
+    .card:active .card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+
+  @media (hover: hover) {
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
   }
 
   .card-front,
@@ -217,19 +237,234 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 1rem; /* Cambiado de 2xl a 1rem para garantizar que funcione */
-    padding: 2rem; /* Añadido padding interno para más espacio */
+    border-radius: 1rem;
   }
 
+  /* Adjust padding more precisely based on screen size */
+  .card-front {
+    padding: 0.75rem;
+  }
+  
   .card-back {
     transform: rotateY(180deg);
-    /* Color de fondo para la parte trasera */
+    padding: 0.75rem;
+  }
+  
+  /* Small screens - reduce padding even more */
+  @media (max-width: 400px) {
+    .card-front, 
+    .card-back {
+      padding: 0.5rem;
+    }
   }
 
-  /* Ajuste para alinear el grid a una altura específica */
+  @media (min-width: 640px) {
+    .card-front, 
+    .card-back {
+      padding: 1rem;
+    }
+  }
+
+  @media (min-width: 1023px) {
+    .card-front, 
+    .card-back {
+      padding: 1.5rem;
+    }
+  }
+
+  /* Extreme mobile size text reduction */
+  @media (max-width: 400px) {
+    .card-back h3 {
+      font-size: 1.25rem !important;
+      margin-bottom: 0.25rem !important;
+    }
+    
+    .card-back h4 {
+      font-size: 0.9rem !important;
+    }
+    
+    .card-back p {
+      font-size: 0.75rem !important;
+      line-height: 1.2 !important;
+      margin-top: 0.25rem !important;
+      margin-bottom: 0.25rem !important;
+    }
+    
+    .card-back .text-xs,
+    .card-back .text-sm,
+    .card-back .text-base {
+      font-size: 0.7rem !important;
+    }
+    
+    .card-front {
+      font-size: 1rem !important;
+    }
+  }
+
+  /* Mobile size text reduction */
+  @media (max-width: 640px) {
+    .card-back h3 {
+      font-size: 1.35rem;
+    }
+    
+    .card-back p {
+      font-size: 0.85rem;
+      line-height: 1.3;
+      margin-top: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+    
+    .card-back h4 {
+      font-size: 0.85rem;
+    }
+    
+    .card-back .text-xs,
+    .card-back .text-sm,
+    .card-back .text-base {
+      font-size: 0.8rem;
+    }
+    
+    .card-front {
+      font-size: 1.1rem;
+    }
+    
+    /* Specific fixes for Education & Experience on mobile */
+    .card-back .my-1 {
+      margin-top: 0.1rem;
+      margin-bottom: 0.1rem;
+    }
+    
+    .card-back .mb-1,
+    .card-back .mb-2 {
+      margin-bottom: 0.15rem;
+    }
+  }
+
+  /* Fix for text size at different breakpoints */
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .card-back h3 {
+      font-size: 1.5rem;
+    }
+    
+    .card-back p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .card-back h4 {
+      font-size: 0.95rem;
+    }
+    
+    .card-back .text-base,
+    .card-back .text-xs,
+    .card-back .text-sm {
+      font-size: 0.85rem;
+    }
+  }
+
+  /* Even more aggressive text size reduction between 760px-1022px */
+  @media (min-width: 760px) and (max-width: 1022px) {
+    .card-back h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.3rem;
+    }
+    
+    .card-back p {
+      font-size: 0.75rem;
+      line-height: 1.2;
+      margin-top: 0.3rem;
+    }
+    
+    .card-back .text-2xl {
+      font-size: 0.85rem;
+    }
+    
+    .card-back .text-3xl {
+      font-size: 1rem;
+    }
+    
+    .card-front {
+      font-size: 1.1rem;
+    }
+    
+    /* Fix Education and Experience cards in this range */
+    .card-back h4.font-bold {
+      font-size: 0.75rem;
+    }
+    
+    .card-back p.text-base,
+    .card-back p.text-sm,
+    .card-back p.text-xs {
+      font-size: 0.7rem;
+      line-height: 1.1;
+      margin: 0.1rem 0;
+    }
+    
+    .card-back .my-1 {
+      margin-top: 0.1rem;
+      margin-bottom: 0.1rem;
+    }
+    
+    .card-back .mb-2 {
+      margin-bottom: 0.2rem;
+    }
+    
+    /* Further reduce padding in this range */
+    .card-back.text-lg {
+      padding: 0.6rem;
+    }
+    
+    .card-back {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      justify-content: flex-start;
+    }
+  }
+
+  /* Better grid layout for the problematic 760px-1022px range */
+  @media (min-width: 760px) and (max-width: 1022px) {
+    .grid {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto auto auto auto auto auto;
+      gap: 0.75rem;
+    }
+    
+    /* Adjust spacing of grid items */
+    [class*="md:col-span-6"] {
+      grid-column: span 6;
+    }
+    
+    [class*="md:col-span-3"] {
+      grid-column: span 3;
+    }
+    
+    /* Force specific positioning */
+    [class*="md:col-start-4"] {
+      grid-column-start: 4;
+    }
+    
+    [class*="md:row-start-5"] {
+      grid-row-start: 5;
+    }
+    
+    /* Make About Me card less dominant */
+    [class*="md:row-span-8"] {
+      grid-row: span 4;
+    }
+  }
+
   @media (min-height: 800px) {
     .grid {
       grid-template-rows: repeat(12, minmax(60px, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-rows: auto;
+      gap: 1rem;
     }
   }
 </style>
