@@ -1,5 +1,5 @@
 import React from 'react';
-
+import DownloadButton from '../components/DownloadButton';
 const Hero = () => {
  
         const scrollDown = () => {
@@ -18,6 +18,8 @@ const Hero = () => {
             }
         };
 
+      
+
     return (
         <div className='pt-90'>
             {/* Hero Section */}
@@ -26,6 +28,7 @@ const Hero = () => {
                 <h2 className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-7xl">
                     FrontEnd Developer
                 </h2>
+                <h4 className='mt-10'><DownloadButton/></h4>
                 
             </section>
 
