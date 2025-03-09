@@ -41,7 +41,7 @@ const Hero = () => {
         id="main-content"
         className="bg-primary mr-10 text-4xl font-bold text-right mt-20"
       >
-        <h1>Photo f</h1>
+        
       </section>
 
       {/* Scroll Button */}
