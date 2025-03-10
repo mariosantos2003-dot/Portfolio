@@ -1,0 +1,24 @@
+---
+// src/components/LanguageSwitcher.astro
+const { pathname } = Astro.url;
+const isSpanish = pathname.startsWith('/es');
+const relativePath = isSpanish ? pathname.replace(/^\/es/, '') : pathname;
+const enURL = relativePath || '/';
+const esURL = `/es${relativePath || '/'}`;
+---
+
+<div class="flex items-center space-x-2">
+  <a 
+    href={enURL} 
+    class={`text-sm font-medium ${!isSpanish ? 'text-white' : 'text-gray-400'} hover:text-accent-purple transition-colors`}
+  >
+    EN
+  </a>
+  <span class="text-gray-400">|</span>
+  <a 
+    href={esURL} 
+    class={`text-sm font-medium ${isSpanish ? 'text-white' : 'text-gray-400'} hover:text-accent-purple transition-colors`}
+  >
+    ES
+  </a>
+</div>

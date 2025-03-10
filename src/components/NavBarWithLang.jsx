@@ -1,6 +1,7 @@
 import React from 'react';
 
-const NavBar = () => {
+const NavBarWithLang = ({ translations, currentLang, enURL = '/', esURL = '/es' }) => {
+  // Funciones de navegación
   const goAbout = () => {
     const mainSection = document.getElementById('main-section');
     if (mainSection) {
@@ -19,8 +20,11 @@ const NavBar = () => {
     const contactSection = document.getElementById("contact-section");
     if(contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
-  }
-};
+    }
+  };
+
+  // Lógica para cambiar de idioma
+  const isSpanish = currentLang === 'es';
 
   return (
     <section>
@@ -38,7 +42,7 @@ const NavBar = () => {
                     href="#"
                     className="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
                     aria-current="page">
-                    Home
+                    {translations.home}
                   </a>
                 </button>
               </li>
@@ -47,7 +51,7 @@ const NavBar = () => {
                   <a
                     href="#"
                     className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                    About
+                    {translations.about}
                   </a>
                 </button>
               </li>
@@ -57,20 +61,36 @@ const NavBar = () => {
                 <a
                   href="#"
                   className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                  Skills
+                  {translations.skills}
                 </a>
                 </button>
-              
               </li>
+              
               <li>
                 <button onClick={goContact}>
                 <a
                   href="#"
                   className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                  Contact
+                  {translations.contact}
                 </a>
                 </button>
-            
+              </li>
+              
+              {/* Selector de idioma */}
+              <li className="flex items-center gap-2">
+                <a 
+                  href={enURL} 
+                  className={`text-sm ${!isSpanish ? 'font-bold text-blue-500' : 'text-gray-400'} hover:text-blue-700 transition-colors`}
+                >
+                  EN
+                </a>
+                <span className="text-gray-400">|</span>
+                <a 
+                  href={esURL} 
+                  className={`text-sm ${isSpanish ? 'font-bold text-blue-500' : 'text-gray-400'} hover:text-blue-700 transition-colors`}
+                >
+                  ES
+                </a>
               </li>
             </ul>
           </div>
@@ -80,4 +100,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavBarWithLang;

@@ -1,6 +1,7 @@
 import React from "react";
-import DownloadButton from "../components/DownloadButton";
-const Hero = () => {
+import DownloadButton from "./DownloadButton";
+
+const HeroWithLang = ({ translations, currentLang }) => {
   const scrollDown = () => {
     const mainSection = document.querySelector(".bg-primary-dark.min-h-screen");
     if (mainSection) {
@@ -20,20 +21,16 @@ const Hero = () => {
   return (
     <div className="pt-90">
       {/* Hero Section */}
-      <section className="bg-primary mt-24  ml-10 font-bold">
+      <section className="bg-primary mt-24 ml-10 font-bold">
         <h1 className="text-7xl">Mario Santos</h1>
         <h2
           className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-7xl"
-          target
         >
-          FrontEnd Developer
+          {translations.role}
         </h2>
         <h3 className="mt-10">
-        <DownloadButton />
+          <DownloadButton text={translations.downloadCV} />
         </h3>
-          
-           
-        
       </section>
 
       {/* Main Content Section */}
@@ -41,7 +38,6 @@ const Hero = () => {
         id="main-content"
         className="bg-primary mr-10 text-4xl font-bold text-right mt-20"
       >
-        
       </section>
 
       {/* Scroll Button */}
@@ -53,7 +49,7 @@ const Hero = () => {
         >
           <img
             src="/whitearrow.svg"
-            alt="Scroll Down Arrow"
+            alt={translations.scrollDown}
             className="w-20 h-20"
           />
         </button>
@@ -62,4 +58,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroWithLang;
