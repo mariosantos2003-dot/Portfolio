@@ -367,6 +367,33 @@ const esURL = pathname;
       margin-bottom: 0.15rem;
     }
   }
+  
+  /* Añadir a tu sección de estilos */
+  @media (max-width: 639px) {
+    .card-back h4 {
+      font-size: 0.5rem !important;
+    }
+    
+    .card-back p {
+      font-size: 0.5rem !important;
+    }
+    
+    /* Para reducir aún más el espacio entre elementos */
+    .card-back .mb-0.5,
+    .card-back .mb-1 {
+      margin-bottom: 0.1rem !important;
+    }
+    
+    .card-back .my-0.5 {
+      margin-top: 0.1rem !important;
+      margin-bottom: 0.1rem !important;
+    }
+    
+    /* Reducir el espacio entre las líneas divisorias */
+    .card-back .border-t {
+      margin: 0.1rem 0 !important;
+    }
+  }
 
   /* Fix for text size at different breakpoints */
   @media (min-width: 641px) and (max-width: 1023px) {

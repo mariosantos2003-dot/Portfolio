@@ -51,19 +51,19 @@ const esURL = `/es${pathname}`;
           About Me
         </div>
         <div class="card-back rounded-2xl bg-primary-dark h-full w-full flex flex-col justify-center p-4 sm:p-4 md:p-6 lg:p-8">
-          <h3 class="text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-bold mb-2 sm:mb-2 md:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500">
+          <h3 class="text-2xl sm:text-xl md:text-3xl lg:text-5xl font-bold mb-2 sm:mb-2 md:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500">
             Mario Santos
           </h3>
-          <p class="text-lg sm:text-lg md:text-xl lg:text-2xl text-left leading-relaxed">
+          <p class="text-lg sm:text-md md:text-xl lg:text-2xl text-left leading-relaxed">
             I'm a Developer focused primarily in <span class="font-semibold text-accent-purple">Front End</span>!
           </p>
-          <p class="text-base sm:text-sm md:text-base lg:text-xl text-left leading-relaxed mt-2 sm:mt-2 md:mt-6">
+          <p class="text-base sm:text-xs md:text-base lg:text-xl text-left leading-relaxed mt-2 sm:mt-2 md:mt-6">
             Since I was a kid, electronics and computers have been my passion, and now I'm making it my profession.
           </p>
-          <p class="text-base sm:text-sm md:text-base lg:text-lg text-left leading-relaxed mt-1 sm:mt-1 md:mt-2">
+          <p class="text-base sm:text-xs md:text-base lg:text-lg text-left leading-relaxed mt-1 sm:mt-1 md:mt-2">
             My second passion is music, and I really like to blend my two passions together.
           </p>
-          <p class="text-base sm:text-sm md:text-base lg:text-lg text-left leading-relaxed mt-1 sm:mt-1 md:mt-2">
+          <p class="text-base sm:text-xs md:text-base lg:text-lg text-left leading-relaxed mt-1 sm:mt-1 md:mt-2">
             I'm a very curious person, always looking for new challenges and learning new things. Also, I'm very hardworking and always give my best in everything I do.
           </p>
         </div>
@@ -316,7 +316,7 @@ const esURL = `/es${pathname}`;
     }
     
     .card-back p {
-      font-size: 0.75rem !important;
+      font-size: 0.5rem !important;
       line-height: 1.2 !important;
       margin-top: 0.25rem !important;
       margin-bottom: 0.25rem !important;
@@ -574,6 +574,33 @@ const esURL = `/es${pathname}`;
       padding-right: 0.5rem !important;
       padding-top: 0.5rem !important;
       padding-bottom: 0.5rem !important;
+    }
+  }
+
+  /* Añadir a tu sección de estilos */
+  @media (max-width: 639px) {
+    .card-back h4 {
+      font-size: 0.5rem !important;
+    }
+    
+    .card-back p {
+      font-size: 0.5rem !important;
+    }
+    
+    /* Para reducir aún más el espacio entre elementos */
+    .card-back .mb-0.5,
+    .card-back .mb-1 {
+      margin-bottom: 0.1rem !important;
+    }
+    
+    .card-back .my-0.5 {
+      margin-top: 0.1rem !important;
+      margin-bottom: 0.1rem !important;
+    }
+    
+    /* Reducir el espacio entre las líneas divisorias */
+    .card-back .border-t {
+      margin: 0.1rem 0 !important;
     }
   }
 </style>
