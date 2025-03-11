@@ -19,38 +19,54 @@ const HeroWithLang = ({ translations, currentLang }) => {
   };
 
   return (
-    <div className="pt-90">
-      {/* Hero Section */}
-      <section className="bg-primary mt-24 ml-10 font-bold">
-        <h1 className="text-7xl">Mario Santos</h1>
-        <h2
-          className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-7xl"
-        >
-          {translations.role}
-        </h2>
-        <h3 className="mt-10">
-          <DownloadButton text={translations.downloadCV} />
-        </h3>
+    <div className="pt-90 overflow-hidden">
+      {/* Hero Section - Ahora con grid para acomodar la foto */}
+      <section className="bg-primary mt-10 sm:mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-8 md:px-12 lg:px-20">
+        {/* Columna izquierda - Texto */}
+        <div className="font-bold flex flex-col justify-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-2">Mario Santos</h1>
+          <h2
+            className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+          >
+            {translations.role}
+          </h2>
+          <div className="mt-8 md:mt-10">
+            <DownloadButton text={translations.downloadCV} />
+          </div>
+        </div>
+
+        {/* Columna derecha - Foto con efecto de borde degradado */}
+        <div className="flex items-center justify-center">
+          <div className="relative w-32 h-32 sm:w-60 sm:h-60 md:w-60 md:h-32 lg:w-[28rem] lg:h-[28rem]">
+            {/* Borde gradiente animado - ahora con z-index bajo */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r to-emerald-600 from-sky-400  blur-sm animate-spin-slow z-0"></div>
+            
+            {/* Marco gradiente - ahora con z-index mayor */}
+            <div className="absolute inset-0 rounded-full p-1 bg-gradient-to-r to-emerald-600 from-sky-400  shadow-xl shadow-emerald-600/30 z-10">
+              {/* Foto - ahora con z-index más alto */}
+              <div className="rounded-full overflow-hidden h-full w-full border-4 border-primary-dark relative z-20">
+                <img 
+                  src="/perfil.webp" 
+                  alt="Mario Santos" 
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Main Content Section */}
-      <section
-        id="main-content"
-        className="bg-primary mr-10 text-4xl font-bold text-right mt-20"
-      >
-      </section>
-
-      {/* Scroll Button */}
-      <section className="bg-primary flex items-center justify-center pt-20 ">
+      {/* Scroll Button - Ahora centrado bajo ambas columnas */}
+      <section className="bg-primary flex items-center justify-center pt-10 sm:pt-16 pb-10">
         <button
           type="button"
           onClick={scrollDown}
-          className="flex items-center justify-center"
+          className="flex items-center justify-center hover:opacity-80 transition-opacity"
         >
           <img
             src="/whitearrow.svg"
             alt={translations.scrollDown}
-            className="w-20 h-20"
+            className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
           />
         </button>
       </section>

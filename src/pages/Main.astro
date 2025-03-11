@@ -249,7 +249,7 @@ const esURL = `/es${pathname}`;
   }
 
   @media (hover: none) {
-    .card:active .card-inner {
+    .card.flipped .card-inner {
       transform: rotateY(180deg);
     }
   }
@@ -500,3 +500,41 @@ const esURL = `/es${pathname}`;
     }
   }
 </style>
+
+<script>
+  // Este código se ejecuta cuando el documento está completamente cargado
+  document.addEventListener('DOMContentLoaded', () => {
+    // Obtener todas las tarjetas
+    const cards = document.querySelectorAll<HTMLElement>('.card');
+    
+    // Añadir evento de clic/toque a cada tarjeta
+    cards.forEach(card => {
+      card.addEventListener('click', function(this: HTMLElement) {
+        // En dispositivos táctiles, alternamos la clase 'flipped'
+        if (window.matchMedia('(hover: none)').matches) {
+          this.classList.toggle('flipped');
+          
+          // Cerrar otras tarjetas cuando se abre una nueva
+          cards.forEach(otherCard => {
+            if (otherCard !== this && otherCard.classList.contains('flipped')) {
+              otherCard.classList.remove('flipped');
+            }
+          });
+        }
+      });
+    });
+    
+    // Opcional: cerrar la tarjeta cuando se toca fuera de ella
+    document.addEventListener('click', function(e: MouseEvent) {
+      // Verificamos que e.target no es null y lo convertimos a Element para usar closest
+      const target = e.target as Element;
+      
+      // Verificamos que target existe y no tiene un ancestro con la clase 'card'
+      if (target && !target.closest('.card') && window.matchMedia('(hover: none)').matches) {
+        cards.forEach(card => {
+          card.classList.remove('flipped');
+        });
+      }
+    }, true);
+  });
+</script>
