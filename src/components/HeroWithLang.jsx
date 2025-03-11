@@ -20,36 +20,38 @@ const HeroWithLang = ({ translations, currentLang }) => {
 
   return (
     <div className="pt-90 overflow-hidden">
-      {/* Hero Section - Ahora con grid para acomodar la foto */}
-      <section className="bg-primary mt-10 sm:mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-8 md:px-12 lg:px-20">
-        {/* Columna izquierda - Texto */}
-        <div className="font-bold flex flex-col justify-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-2">Mario Santos</h1>
-          <h2
-            className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
-          >
-            {translations.role}
-          </h2>
-          <div className="mt-8 md:mt-10">
-            <DownloadButton text={translations.downloadCV} />
+      {/* Hero Section - Ahora con flex para mejor control en móvil */}
+      <section className="bg-primary mt-10 sm:mt-16 md:mt-24 px-4 sm:px-8 md:px-12 lg:px-20">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          {/* Columna izquierda - Texto */}
+          <div className="font-bold max-w-2xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-2">Mario Santos</h1>
+            <h2
+              className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+            >
+              {translations.role}
+            </h2>
+            <div className="mt-8 md:mt-10">
+              <DownloadButton text={translations.downloadCV} />
+            </div>
           </div>
-        </div>
 
-        {/* Columna derecha - Foto con efecto de borde degradado */}
-        <div className="flex items-center justify-center">
-          <div className="relative w-32 h-32 sm:w-60 sm:h-60 md:w-60 md:h-32 lg:w-[28rem] lg:h-[28rem]">
-            {/* Borde gradiente animado - ahora con z-index bajo */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r to-emerald-600 from-sky-400  blur-sm animate-spin-slow z-0"></div>
-            
-            {/* Marco gradiente - ahora con z-index mayor */}
-            <div className="absolute inset-0 rounded-full p-1 bg-gradient-to-r to-emerald-600 from-sky-400  shadow-xl shadow-emerald-600/30 z-10">
-              {/* Foto - ahora con z-index más alto */}
-              <div className="rounded-full overflow-hidden h-full w-full border-4 border-primary-dark relative z-20">
-                <img 
-                  src="/perfil.webp" 
-                  alt="Mario Santos" 
-                  className="object-cover w-full h-full"
-                />
+          {/* Columna derecha - Foto - ahora con auto-margen a la izquierda para empujarla a la derecha */}
+          <div className="flex justify-end mt-8 md:mt-0 ml-auto">
+            <div className="relative w-24 h-24 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64">
+              {/* Borde gradiente animado - ahora con z-index bajo */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r to-emerald-600 from-sky-400 blur-sm animate-spin-slow z-0"></div>
+              
+              {/* Marco gradiente - ahora con z-index mayor */}
+              <div className="absolute inset-0 rounded-full p-1 bg-gradient-to-r to-emerald-600 from-sky-400 shadow-xl shadow-emerald-600/30 z-10">
+                {/* Foto - ahora con z-index más alto */}
+                <div className="rounded-full overflow-hidden h-full w-full border-4 border-primary-dark relative z-20">
+                  <img 
+                    src="/perfil.webp" 
+                    alt="Mario Santos" 
+                    className="object-cover w-full h-full"
+                  />
+                </div>
               </div>
             </div>
           </div>

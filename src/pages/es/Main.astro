@@ -31,7 +31,7 @@ const esURL = pathname;
 <HeroWithLang translations={translations.hero} currentLang={currentLang} client:load />
 <section id="main-section" class="bg-primary-dark mt-16 sm:mt-24 md:mt-40 lg:mt-60 min-h-screen mb-16 sm:mb-32 md:mb-64 lg:mb-100">
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-10 grid-rows-auto gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-8 md:px-12 lg:px-20 py-12 sm:py-16 md:py-24 lg:py-100 w-full text-2xl md:text-3xl lg:text-4xl text-center font-bold min-h-[80vh]"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-10 grid-rows-auto gap-3 sm:gap-4 md:gap-6 lg:gap-8 px-3 sm:px-6 md:px-10 lg:px-20 py-6 sm:py-10 md:py-16 lg:py-100 w-full text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold min-h-[80vh]"
   >
     <!-- Botón 1 - About Me -->
     <div
@@ -493,6 +493,83 @@ const esURL = pathname;
     .grid {
       grid-template-rows: auto;
       gap: 1rem;
+    }
+  }
+
+  /* Reducción extrema para dispositivos muy pequeños */
+  @media (max-width: 380px) {
+    .card-back h3 {
+      font-size: 1rem !important;
+      margin-bottom: 0.2rem !important;
+    }
+    
+    .card-back p {
+      font-size: 0.7rem !important;
+      line-height: 1.1 !important;
+      margin-top: 0.15rem !important;
+      margin-bottom: 0.15rem !important;
+    }
+    
+    .card-front {
+      font-size: 0.9rem !important;
+    }
+    
+    /* Reducir altura mínima de cards */
+    .card {
+      min-height: 120px !important;
+    }
+    
+    /* Reducir padding */
+    .card-front, 
+    .card-back {
+      padding: 0.35rem !important;
+    }
+  }
+
+  /* Para móviles más grandes pero aún pequeños */
+  @media (min-width: 381px) and (max-width: 480px) {
+    .card-back h3 {
+      font-size: 1.1rem !important;
+    }
+    
+    .card-back p {
+      font-size: 0.75rem !important;
+      line-height: 1.2 !important;
+    }
+    
+    .card-front {
+      font-size: 1rem !important;
+    }
+    
+    .card {
+      min-height: 130px !important;
+    }
+  }
+
+  /* Ajustar específicamente la card de About Me */
+  @media (max-width: 480px) {
+    .card-back .text-lg,
+    .card-back .text-xl,
+    .card-back .text-2xl {
+      font-size: 0.8rem !important;
+      line-height: 1.2 !important;
+    }
+    
+    /* Reducir margen entre párrafos */
+    .card-back .mt-2,
+    .card-back .mt-1 {
+      margin-top: 0.25rem !important;
+    }
+  }
+
+  /* Reducir espaciado general en dispositivos móviles */
+  @media (max-width: 640px) {
+    .grid {
+      gap: 0.5rem !important;
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
     }
   }
 </style>
