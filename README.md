@@ -1,48 +1,86 @@
-# Astro Starter Kit: Basics
+Portfolio Personal - Mario Santos
+Un portfolio personal moderno y responsive desarrollado con Astro, Tailwind CSS y JavaScript. Este proyecto presenta de manera interactiva mis habilidades, experiencia, educación y proyectos mediante un diseño de tarjetas con efecto flip.
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Portfolio Screenshot
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+🚀 Características Principales
+Diseño Responsivo: Adaptado para funcionar perfectamente en cualquier dispositivo, desde móviles hasta pantallas grandes
+Tarjetas Interactivas: Efecto flip en las tarjetas para mostrar información detallada
+Multilingüe: Soporte para español e inglés
+Estética Moderna: Diseño con gradientes y efectos visuales atractivos
+Optimizado para Rendimiento: Construido con Astro para una carga rápida y eficiente
+🛠️ Tecnologías Utilizadas
+Frontend:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Astro - Framework web de alto rendimiento
+Tailwind CSS - Framework CSS utilitario
+JavaScript - Para animaciones e interactividad
+Optimización:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
+Estructura del Proyecto
+Portfolio/
+├── public/            # Archivos estáticos (imágenes, iconos, etc.)
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+│   ├── components/    # Componentes reutilizables
+│   │   ├── cards/     # Componentes de tarjetas (BaseCard, ExperienceCard, etc.)
+│   │   ├── sections/  # Secciones principales (Skills, Projects, etc.)
+│   │   └── styles/    # Estilos CSS específicos
+│   ├── i18n/          # Traducciones y configuración de idiomas
+│   ├── layouts/       # Plantillas de páginas
+│   └── pages/         # Páginas del sitio
+└── astro.config.mjs   # Configuración de Astro
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-## 🧞 Commands
+Componentes modulares y reutilizables
+Imágenes optimizadas
+📋 Estructura del Proyecto
+🧩 Componentes Principales
+Sistema de Tarjetas
+Implementación de tarjetas con efecto flip que muestran información detallada al pasar el cursor o tocar en dispositivos móviles.
 
-All commands are run from the root of the project, from a terminal:
+Secciones Modulares
+Hero: Presentación personal con animaciones
+Skills: Visualización de habilidades técnicas
+Experience: Historial laboral relevante
+Education: Formación académica
+Projects: Proyectos destacados con enlaces
+🔧 Características Técnicas
+Diseño Responsive Avanzado: Ajustes específicos para múltiples breakpoints
+Accesibilidad: Cumple con estándares WCAG
+Animaciones Optimizadas: Transiciones fluidas sin afectar el rendimiento
+Mantenibilidad: Código limpio y bien estructurado
+📱 Responsive Design
+El portfolio está cuidadosamente optimizado para funcionar en:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+Dispositivos móviles (< 640px)
+Tablets (640px - 768px)
+Pantallas medianas (768px - 1024px)
+Pantallas grandes (> 1024px)
 
-## 👀 Want to learn more?
+🚀 Instalación y Uso
+Clona el repositorio:
+git clone https://github.com/tuusuario/portfolio.git
+Instala las dependencias:
+cd portfolio
+Inicia el servidor de desarrollo:
+npm run dev
+Para construir el proyecto para producción
+npm run build
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+El proyecto está configurado para ser desplegado en cualquier servicio de hosting estático como:
+Netlify
+Vercel
+GitHub Pages
+👨‍💻 Autor
+Juan Manuel Nacimiento - Desarrollador Web Full Stack
+📄 Licencia
+Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
+
+🔗 Enlaces de Contacto
+Portfolio
+LinkedIn
+GitHub
+Hecho con ❤️ y ☕ por Mario Santos
+
