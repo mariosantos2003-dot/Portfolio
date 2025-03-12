@@ -1,7 +1,8 @@
 Portfolio Personal - Mario Santos
+
 Un portfolio personal moderno y responsive desarrollado con Astro, Tailwind CSS y JavaScript. Este proyecto presenta de manera interactiva mis habilidades, experiencia, educación y proyectos mediante un diseño de tarjetas con efecto flip.
 
-Portfolio Screenshot
+
 
 🚀 Características Principales
 Diseño Responsivo: Adaptado para funcionar perfectamente en cualquier dispositivo, desde móviles hasta pantallas grandes
@@ -74,13 +75,12 @@ Netlify
 Vercel
 GitHub Pages
 👨‍💻 Autor
-Juan Manuel Nacimiento - Desarrollador Web Full Stack
-📄 Licencia
-Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
+Mario Santos - Desarrollador Web
+
 
 🔗 Enlaces de Contacto
-Portfolio
-LinkedIn
-GitHub
+Portfolio - https://portfoliomariosantos.vercel.app/
+LinkedIn - https://www.linkedin.com/in/mario-santos-blazquez-15961528a/
+GitHub - https://github.com/mariosantos2003-dot
 Hecho con ❤️ y ☕ por Mario Santos
 
