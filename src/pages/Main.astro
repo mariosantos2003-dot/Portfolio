@@ -9,6 +9,7 @@ import SectionHeading from "../components/sections/SectionHeading.astro";
 import CardFlipBehavior from "../components/CardFlipBehavior.astro";
 import { translations } from "../i18n/translations";
 import '../components/styles/card-styles.css';
+import SkillsSection from "../components/sections/SkillsSection.astro";
 
 const currentLang = "en";
 const pathname = Astro.url.pathname;
@@ -67,7 +68,9 @@ const esURL = `/es${pathname.replace(/^\/en\/?/, "/")}`;
         lang={currentLang}
         projectKey="divine"
       />
+      
     </div>
+    <SkillsSection />
   </section>
 
   <!-- Scripts para el flip de las tarjetas -->

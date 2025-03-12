@@ -15,69 +15,72 @@ const skills = [
 ];
 ---
 
-<section id="skills" class="mt-8 sm:mt-10 md:mt-12 lg:mt-16 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-    <div class="flex justify-center mb-4 sm:mb-5">
-        <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 inline-block">
+<section id="skills" class="mt-16 sm:mt-24 md:mt-40 lg:mt-60 mb-16 sm:mb-32 md:mb-64 lg:mb-100 w-full">
+    <div class="flex justify-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 inline-block">
             {title}
         </h1>
     </div>
 
-    <div class="relative rounded-xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 hover:shadow-xl hover:shadow-purple-600/30 transition ease-in-out duration-300 mx-4 sm:mx-6 md:mx-8 lg:mx-10 shadow-lg shadow-purple-600/30 max-w-2xl mx-auto">
-        <div class="relative bg-primary-dark rounded-xl p-2">
-            <!-- Grid mucho más compacto -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-1 relative">
+    <div class="relative rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 mx-3 sm:mx-6 md:mx-10 lg:mx-20 shadow-lg shadow-purple-600/30">
+        <div class="relative bg-primary-dark rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8">
+            <!-- Grid que ocupa ancho completo pero mantiene altura compacta -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-4 md:gap-6 lg:gap-8 relative">
                 
                 {skills.map(skill => (
-                  <div class="flex flex-col items-center justify-center py-1 px-1">
+                  <div class="flex flex-col items-center justify-center py-2 px-2">
                       <img 
                           src={skill.icon} 
                           alt={skill.name} 
-                          class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10"
+                          class="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
                       />
-                      <p class="text-[10px] sm:text-[11px] md:text-xs mt-1 text-gray-300 text-center">{skill.name}</p>
+                      <p class="text-xs sm:text-sm md:text-base lg:text-lg mt-2 text-gray-300 text-center">{skill.name}</p>
                   </div>
                 ))}
                 
            
+                
+              
             </div>
         </div>
     </div>
 </section>
 
 <style>
-/* Limitación de tamaño para toda la sección */
-section {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Tamaño máximo para el contenedor */
-section > div:nth-child(2) {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Hacer el grid más compacto */
+/* Ajustar el grid para mantener altura compacta pero permitir ancho completo */
 .grid {
-  max-width: 650px;
-  margin: 0 auto;
-  max-height: 100px;
-
-  margin-bottom: 20px;
+margin-top: 50px;
+margin-bottom: -80px;
+  max-height: 180px; /* Altura base más proporcional al ancho completo */
 }
 
-/* Ajustes para pantallas medianas (menos de 760px) */
-@media (max-width: 760px) {
+/* Ajustes responsivos para diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
   .grid {
-    max-height: 90px;
-    margin-top: 15px;
+    max-height: 160px;
+    margin-top: -10px;
+    margin-bottom: -40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    max-height: 390px;
+  
+    margin-bottom: -20px;
+
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    max-height: 310px;
+    gap: 0.5rem;
+    margin-bottom: 10px;
   }
   
   .grid > div {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0.5rem;
   }
   
   .grid img {
@@ -86,18 +89,15 @@ section > div:nth-child(2) {
   }
   
   .grid p {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     margin-top: 0.25rem;
+    line-height: 1;
   }
 }
 
-/* Ajustes adicionales para pantallas pequeñas (menos de 640px) */
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .grid {
-    max-height: 80px;
-    margin-top:0px;
-    margin-bottom:60px;
-    gap: 0.25rem;
+    max-height: 90px;
   }
   
   .grid > div {
@@ -112,39 +112,6 @@ section > div:nth-child(2) {
   .grid p {
     font-size: 0.55rem;
     margin-top: 0.15rem;
-    line-height: 0.5;
-  }
-  
-  /* Reducir espacios en el título y contenedor */
-  section h1 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  section > div:nth-child(2) {
-    max-width: 400px;
-  }
-}
-
-/* Ajustes extra para pantallas muy pequeñas (menos de 480px) */
-@media (max-width: 480px) {
-  .grid {
-    max-height: 70px;
-    margin-top: 8px;
-  }
-  
-  .grid > div {
-    padding: 0.15rem;
-  }
-  
-  .grid img {
-    width: 18px;
-    height: 18px;
-  }
-  
-  .grid p {
-    font-size: 0.5rem;
-    margin-top: 0.1rem;
   }
 }
 </style>

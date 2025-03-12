@@ -385,3 +385,204 @@
       padding-bottom: 0.5rem !important;
     }
   }
+
+/* Solucionar el problema de cards estrechas en el rango 760px-1023px */
+@media (min-width: 760px) and (max-width: 1023px) {
+  /* Mantener equilibrio en el grid para pantallas entre 760px y 1023px */
+  .grid {
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 0.3rem;
+  }
+  
+  /* Asegurar que todas las cards tengan un ancho mínimo */
+  .card {
+    min-width: 150px;
+  }
+  
+  /* Ajustar específicamente las cards que se están estrechando */
+  [class*="md:col-span-3"] {
+    grid-column: span 3 !important;
+     /* Eliminar cualquier min-width específico */
+  }
+  
+  /* Ajustar Divine Web (si estuviera en la posición md:col-start-4) */
+  [class*="md:col-start-4"] {
+    grid-column-start: 4 !important;
+    width: auto !important; /* Asegurar que ocupe todo su espacio */
+  }
+  
+  /* Hacer que Experience card tenga un ancho mejor proporcionado */
+  .card[class*="experience-card"],
+  .card:has(.experience-title) {
+    width: 100% !important;
+  }
+  
+  /* Solucionar Divine Web proporción si está en la segunda fila */
+  [class*="md:row-start-5"] {
+    grid-row-start: 5 !important;
+    width: 100% !important;
+  }
+  
+  /* Ajustar mejor las proporciones de columnas */
+  .grid > * {
+    width: 100% !important;
+  }
+  
+  /* Solución completamente específica para Divine Web */
+  .divine-project-card {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    grid-column: 4 / span 3 !important;
+    min-height: 200px !important;
+  }
+  
+  /* En caso extremo: si nada más funciona */
+  .divine-project-card .card-inner,
+  .divine-project-card .card-front,
+  .divine-project-card .card-back {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/* Modificar el estilo existente para evitar colisiones */
+@media (min-width: 760px) and (max-width: 1022px) {
+  /* Mejorar la distribución del texto en las cards estrechas */
+  .card-back h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .card-back p {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin-top: 0.3rem;
+  }
+  
+  /* Parámetros para el grid mejorados */
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: 0.75rem;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Asegurar equilibrio en el layout */
+  [class*="md:col-span-6"] {
+    grid-column: span 6;
+    width: 100% !important;
+  }
+  
+  [class*="md:col-span-3"] {
+    grid-column: span 3;
+    width: 100% !important;
+  }
+  
+  /* Para Experience card y Divine Web */
+  [class*="md:col-span-3"],
+  [class*="md:col-start-4"] {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+}
+
+/* Ajuste específico para la card de Experience y Divine Web */
+@media (min-width: 760px) and (max-width: 1023px) {
+  /* Reducción adicional de padding para mejorar espacio interno */
+  .card-back {
+    padding: 0.5rem !important;
+  }
+  
+  /* Solucionar problemas de tamaño de texto */
+  .card:nth-child(3) .card-back h3,
+  .card:nth-child(6) .card-back h3 {
+    font-size: 1rem !important;
+  }
+  
+  /* Ajustar el espacio entre elementos de lista */
+  .card-back ul li,
+  .card-back ol li {
+    margin-bottom: 0.1rem !important;
+  }
+  
+  /* Ajustar el ancho general para pantallas específicas */
+  @media (min-width: 760px) and (max-width: 900px) {
+    .card-back p {
+      font-size: 0.7rem !important;
+    }
+  }
+}
+
+/* Añadir al final de tus estilos */
+
+/* Solución específica para igualar la altura de Experience con la de Education */
+@media (min-width: 760px) and (max-width: 1023px) {
+  /* Asegurar que Experience card tenga la misma altura que Education */
+  .experience-card {
+    height: 0% !important;
+    min-height: 120px !important; /* Ajusta según la altura que necesites */
+    display: flex !important;
+    flex-direction: column !important;
+    height: 120px;
+  }
+  
+  /* Forzar que el contenido interno ocupe toda la altura disponible */
+  .experience-card  {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  /* Forzar que las caras de la card ocupen toda la altura */
+  .experience-card  {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+
+  }
+  
+  /* Asegurar que el contenido se distribuya correctamente */
+  .experience-card-content,
+  .card:has(.experience-title) .card-back > div {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+  
+  /* Ajustar el espaciado interno */
+  .card:has(.experience-title) .card-back {
+    padding: 0.75rem !important;
+  }
+  
+  /* Distribuir mejor los elementos de trabajo */
+  .experience-card-content .mb-2:last-child,
+  .card:has(.experience-title) .card-back .mb-2:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  /* Ajustar el espacio entre cada trabajo */
+  .experience-job-item,
+  .card:has(.experience-title) .card-back .mb-2 {
+    margin-bottom: 0.3rem !important;
+  }
+  
+  /* Si los trabajos están muy juntos, añadir un separador más visible */
+  .experience-job-item:not(:last-child),
+  .card:has(.experience-title) .card-back .mb-2:not(:last-child) {
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+    padding-bottom: 0.3rem;
+  }
+}
+
+/* Para asegurarnos que tanto Experience como Education tienen la misma altura */
+@media (min-width: 760px) and (max-width: 1023px) {
+  /* Establecer altura específica para ambas cards */
+   
+  .experience-card {
+    height: 300px !important; /* Ajusta este valor según sea necesario */
+  }
+}

@@ -30,7 +30,8 @@ const projectConfig = {
     url: "#",
     technologies: [],
     comingSoon: true,
-    columnStart: "md:col-start-4 lg:col-start-6"
+    // Modificar para resolver el problema en el rango específico
+    columnStart: "md:col-start-4 lg:col-start-6 divine-project-card"
   }
 };
 
@@ -41,7 +42,7 @@ const isComingSoon = config.comingSoon;
 
 <BaseCard 
   title={t.title}
-  columnClasses={finalColumnClasses}
+  columnClasses={`${finalColumnClasses} ${projectKey === 'divine' ? 'divine-project-card' : ''}`}
   rowClasses={rowClasses}
 >
   {isComingSoon ? (
