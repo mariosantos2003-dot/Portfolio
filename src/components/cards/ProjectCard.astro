@@ -1,0 +1,87 @@
+---
+import BaseCard from './BaseCard.astro';
+import { translations, type Language } from '../../i18n/translations';
+
+interface Props {
+  lang: Language;
+  projectKey: "nilgrafic" | "divine";
+  columnClasses?: string;
+  rowClasses?: string;
+}
+
+const { 
+  lang, 
+  projectKey,
+  columnClasses = "col-span-1 sm:col-span-1 md:col-span-3 lg:col-span-5",
+  rowClasses = "row-span-auto md:row-span-2" 
+} = Astro.props;
+
+const t = translations[lang].projects[projectKey];
+
+// Configuraciones específicas por proyecto
+const projectConfig = {
+  nilgrafic: {
+    url: "https://nilgrafic.com/",
+    technologies: [{ name: "Wordpress", icon: "/wordpress.svg" }],
+    comingSoon: false,
+    columnStart: ""
+  },
+  divine: {
+    url: "#",
+    technologies: [],
+    comingSoon: true,
+    columnStart: "md:col-start-4 lg:col-start-6"
+  }
+};
+
+const config = projectConfig[projectKey];
+const finalColumnClasses = `${columnClasses} ${config.columnStart}`;
+const isComingSoon = config.comingSoon;
+---
+
+<BaseCard 
+  title={t.title}
+  columnClasses={finalColumnClasses}
+  rowClasses={rowClasses}
+>
+  {isComingSoon ? (
+    <div class="flex items-center justify-center h-full">
+      <a href="#" class="group text-accent-purple transition duration-300">
+        {'comingSoon' in t ? t.comingSoon : 'Coming Soon'}
+        <span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-accent-purple"
+        ></span>
+      </a>
+    </div>
+  ) : (
+    <div class="flex flex-col justify-between h-full py-2">
+      <div class="text-3xl font-semibold">{'description' in t ? t.description : ''}</div>
+
+      <div class="text-base">
+        <a
+          href={config.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group text-accent-purple transition duration-300"
+        >
+          {'linkText' in t ? t.linkText : t.title}
+          <span
+            class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-accent-purple"
+          ></span>
+        </a>
+      </div>
+      
+      {config.technologies.length > 0 && (
+        <div class="p-[0.8px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 items-center justify-center hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 rounded-full mt-5 shadow-lg shadow-purple-600/30">
+          <button class="bg-primary-dark rounded-full text-sm flex">
+            {config.technologies.map(tech => (
+              <div class="flex items-center px-2 py-1">
+                <img src={tech.icon} alt="" class="size-6 mr-1" /> {tech.name}
+              </div>
+            ))}
+          </button>
+        </div>
+      )}
+    </div>
+  )}
+</BaseCard>

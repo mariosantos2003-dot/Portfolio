@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  gradientClasses?: string;
+  columnClasses?: string;
+  rowClasses?: string;
+}
+
+const { 
+  title, 
+  gradientClasses = "from-purple-500 via-red-500 to-yellow-500", 
+  columnClasses = "col-span-1", 
+  rowClasses = "row-span-auto"
+} = Astro.props;
+---
+
+<div
+  class={`${columnClasses} ${rowClasses} rounded-2xl p-[2px] bg-gradient-to-r ${gradientClasses} items-center justify-center hover:shadow-2xl hover:shadow-purple-600/30 transition ease-in-out duration-300 card shadow-lg shadow-purple-600/30`}
+>
+  <div class="card-inner">
+    <div
+      class="card-front rounded-2xl bg-primary-dark h-full w-full items-center flex justify-center text-2xl sm:text-xl md:text-2xl lg:text-3xl"
+    >
+      {title}
+    </div>
+    <div class="card-back rounded-2xl bg-primary-dark h-full w-full flex flex-col justify-start py-1 px-1 sm:py-2 sm:px-2 md:py-3 md:px-3">
+      <slot />
+    </div>
+  </div>
+</div>

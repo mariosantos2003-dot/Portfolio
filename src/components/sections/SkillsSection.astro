@@ -1,0 +1,150 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = "SKILLS" } = Astro.props;
+
+const skills = [
+  { name: "JavaScript", icon: "/js.svg" },
+  { name: "MySQL", icon: "/mysql.svg" },
+  { name: "React", icon: "/react.svg" },
+  { name: "PHP", icon: "/php.svg" },
+  { name: "Java", icon: "/java.svg" },
+  { name: "Astro", icon: "/astro.svg" }
+];
+---
+
+<section id="skills" class="mt-8 sm:mt-10 md:mt-12 lg:mt-16 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+    <div class="flex justify-center mb-4 sm:mb-5">
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 inline-block">
+            {title}
+        </h1>
+    </div>
+
+    <div class="relative rounded-xl p-[2px] bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 hover:shadow-xl hover:shadow-purple-600/30 transition ease-in-out duration-300 mx-4 sm:mx-6 md:mx-8 lg:mx-10 shadow-lg shadow-purple-600/30 max-w-2xl mx-auto">
+        <div class="relative bg-primary-dark rounded-xl p-2">
+            <!-- Grid mucho más compacto -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-1 relative">
+                
+                {skills.map(skill => (
+                  <div class="flex flex-col items-center justify-center py-1 px-1">
+                      <img 
+                          src={skill.icon} 
+                          alt={skill.name} 
+                          class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10"
+                      />
+                      <p class="text-[10px] sm:text-[11px] md:text-xs mt-1 text-gray-300 text-center">{skill.name}</p>
+                  </div>
+                ))}
+                
+           
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Limitación de tamaño para toda la sección */
+section {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tamaño máximo para el contenedor */
+section > div:nth-child(2) {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hacer el grid más compacto */
+.grid {
+  max-width: 650px;
+  margin: 0 auto;
+  max-height: 100px;
+
+  margin-bottom: 20px;
+}
+
+/* Ajustes para pantallas medianas (menos de 760px) */
+@media (max-width: 760px) {
+  .grid {
+    max-height: 90px;
+    margin-top: 15px;
+  }
+  
+  .grid > div {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .grid img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .grid p {
+    font-size: 0.6rem;
+    margin-top: 0.25rem;
+  }
+}
+
+/* Ajustes adicionales para pantallas pequeñas (menos de 640px) */
+@media (max-width: 640px) {
+  .grid {
+    max-height: 80px;
+    margin-top:0px;
+    margin-bottom:60px;
+    gap: 0.25rem;
+  }
+  
+  .grid > div {
+    padding: 0.25rem;
+  }
+  
+  .grid img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .grid p {
+    font-size: 0.55rem;
+    margin-top: 0.15rem;
+    line-height: 0.5;
+  }
+  
+  /* Reducir espacios en el título y contenedor */
+  section h1 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  section > div:nth-child(2) {
+    max-width: 400px;
+  }
+}
+
+/* Ajustes extra para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+  .grid {
+    max-height: 70px;
+    margin-top: 8px;
+  }
+  
+  .grid > div {
+    padding: 0.15rem;
+  }
+  
+  .grid img {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .grid p {
+    font-size: 0.5rem;
+    margin-top: 0.1rem;
+  }
+}
+</style>
