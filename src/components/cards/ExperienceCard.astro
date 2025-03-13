@@ -22,14 +22,14 @@ const t = translations[lang].experienceCard;
   columnClasses={`${columnClasses} experience-card`}
   rowClasses={rowClasses}
 >
-  <div class="experience-card-content h-full flex flex-col justify-between">
+  <div class="experience-card-content h-full flex flex-col justify-center text-center">
     <div class="mt-2">
       {t.jobs.map((job) => (
         <div class="mb-2 experience-job-item">
-          <h4 class="text-xs sm:text-sm md:text-base text-left font-bold text-accent-purple">
+          <h4 class="text-xs sm:text-sm md:text-base text-center font-bold text-accent-purple">
             {job.title}
           </h4>
-          <p class="text-xs sm:text-sm text-left text-gray-300">
+          <p class="text-xs sm:text-sm text-center text-gray-300">
             {job.company}
           </p>
           <div class="border-t border-accent-purple/20 my-1"></div>

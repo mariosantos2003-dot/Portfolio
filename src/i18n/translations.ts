@@ -45,7 +45,22 @@ export const translations = {
         title: "Bachelor Degree",
         level: "Social Science",
         institution: "IES GOYA 2019-2021"
-      }
+      },
+      threejs: {
+        title: "Three.js Course",
+        level: "Online Course",
+        institution: "Udemy 2024"
+      },
+      Python:{
+        title: "Python WebScrapping Course",
+        level: "Online Course",
+        institution: "Udemy 2023"
+      },
+      Adminsitrative:{
+        title: "Administrative Course",
+        level: "Introduction Course",
+        institution: "Hospital Clinic 2024"
+    },
     },
     experienceCard: {
       title: "Experience",
@@ -117,7 +132,22 @@ export const translations = {
         title: "Bachillerato",
         level: "Ciencias Sociales",
         institution: "IES GOYA 2019-2021"
-      }
+      },
+      threejs: {
+        title: "Curso de Three.js ",
+        level: "Curso Online ",
+        institution: "Udemy 2024"
+      },
+      Python:{
+        title: "Python Curso de WebScrapping ",
+        level: "Curso Online",
+        institution: "Udemy 2023"
+      },
+      Adminsitrative:{
+        title: "Curso de Administrativo",
+        level: "Introduccion a la administración",
+        institution: "Hospital Clinic 2024"
+    }
     },
     experienceCard: {
       title: "Experiencia",
