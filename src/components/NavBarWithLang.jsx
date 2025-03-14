@@ -27,14 +27,14 @@ const NavBarWithLang = ({ translations, currentLang, enURL = '/', esURL = '/es' 
   const isSpanish = currentLang === 'es';
 
   return (
-    <section>
-      <nav className="border-gray-200 bg-primary-dark">
+    <section className='sticky top-0 z-50'>
+      <nav className="border-gray-200 bg-primary-dark sticky" id='navbar'>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             MS
           </span>
 
-          {/* Botón hamburguesa para móviles */}
+       
           <button 
             type="button" 
             className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -113,3 +113,7 @@ const NavBarWithLang = ({ translations, currentLang, enURL = '/', esURL = '/es' 
 };
 
 export default NavBarWithLang;
+
+<style>
+  
+</style>
