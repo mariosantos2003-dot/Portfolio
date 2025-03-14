@@ -37,8 +37,8 @@ const HeroWithLang = ({ translations, currentLang }) => {
           </div>
 
           {/* Columna derecha - Foto - ahora con auto-margen a la izquierda para empujarla a la derecha */}
-          <div className="flex justify-end mt-8 md:mt-0 ml-auto">
-            <div className="relative w-24 h-24 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64">
+          <div className="flex justify-end mt-8 md:mt-0 ml-auto pl-20 ">
+            <div className="relative w-24 h-24 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 ">
               {/* Borde gradiente animado - ahora con z-index bajo */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r to-emerald-600 from-sky-400 blur-sm animate-spin-slow z-0"></div>
               
