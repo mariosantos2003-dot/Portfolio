@@ -93,9 +93,13 @@ export const translations = {
       divine: {
         title: "Divine Web",
         comingSoon: "Coming Soon"
+      },
+      uahorta: {
+        title: "UA Horta",
+        description: "Web Page for the Soccer Club Where I Work",
+        linkText: "Click me!"
       }
-    }
-  },
+    },
   es: {
     navBar: {
       home: "Inicio",
@@ -180,7 +184,12 @@ export const translations = {
       divine: {
         title: "Divine Web",
         comingSoon: "Próximamente"
+      },
+      uahorta: {
+        title: "UA Horta",
+        description: "Página Web del Club de Fútbol Donde Trabajo",
+        linkText: "¡Haz clic aquí!"
+        }
       }
     }
-  }
-};
+  }};

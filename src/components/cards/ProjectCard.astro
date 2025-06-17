@@ -4,7 +4,7 @@ import { translations, type Language } from '../../i18n/translations';
 
 interface Props {
   lang: Language;
-  projectKey: "nilgrafic" | "divine";
+  projectKey: "nilgrafic" | "divine" | "uahorta"; // Puedes agregar más claves de proyecto según sea necesario
   columnClasses?: string;
   rowClasses?: string;
 }
@@ -16,7 +16,7 @@ const {
   rowClasses = "row-span-auto md:row-span-2" 
 } = Astro.props;
 
-const t = translations[lang].projects[projectKey];
+const t = translations[lang as keyof typeof translations].projects[projectKey];
 
 // Configuraciones específicas por proyecto
 const projectConfig = {
@@ -32,6 +32,12 @@ const projectConfig = {
     comingSoon: true,
     // Modificar para resolver el problema en el rango específico
     columnStart: "md:col-start-4 lg:col-start-6 divine-project-card"
+  },
+  uahorta: {
+    url: "https://uahorta.up.railway.app/",
+    comingSoon: false,
+    columnStart: "",
+
   }
 };
 
